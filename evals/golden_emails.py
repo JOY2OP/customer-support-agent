@@ -6,9 +6,13 @@ def email(sender: str, subject: str, body: str) -> str:
 GOLDEN_EMAILS = [
     {
         "name": "board-size-90kg",
-        "email": email("Tom Becker <tom@example.com>", "Which board?",
-                       "Hi, I weigh about 90 kg. Which of your paddle boards should I buy?"),
-        "section": "paddle-boards", "action": "reply",
+        "email": email(
+            "Tom Becker <tom@example.com>", 
+            "Which board?",
+            "Hi, I weigh about 90 kg. Which of your paddle boards should I buy?"
+        ),
+        "section": "paddle-boards", 
+        "action": "reply",
     },
     {
         "name": "board-size-german",

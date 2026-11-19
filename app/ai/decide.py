@@ -23,6 +23,7 @@ def decide(thread: str, has_attachments: bool = False) -> Decision:
         return escalate(classification.reason)
 
     answer = write_reply(thread, classification.section)
+    
     if answer.action == "escalate":
         return escalate(answer.reasoning)
     if not answer.enough_information:

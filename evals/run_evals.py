@@ -38,5 +38,9 @@ dataset = Dataset(
 )
 
 if __name__ == "__main__":
+
+    # Run the evaluation
     report = dataset.evaluate_sync(run_pipeline, max_concurrency=1)
+
+    # Print the results
     report.print(include_input=False, include_output=True, include_durations=False)
